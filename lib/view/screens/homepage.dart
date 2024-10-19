@@ -22,12 +22,6 @@ class HomePage extends StatelessWidget {
           style:
               GoogleFonts.getFont("Mulish", textStyle: TextStyle(fontSize: 22)),
         ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            // Handle back button action
-          },
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
