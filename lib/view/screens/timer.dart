@@ -43,7 +43,7 @@ class _HabitTimerPageState extends State<HabitTimerPage> {
     final args =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     String habitName = args['habitName'];
-    // totalTimeInSeconds = args['totalTime'] * 60;
+
     remainingTimeInSeconds = totalTimeInSeconds;
 
     return Scaffold(
@@ -80,13 +80,13 @@ class _HabitTimerPageState extends State<HabitTimerPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      habitName, // Dynamic habit name
+                      habitName,
                       style: GoogleFonts.getFont('Mulish',
                           textStyle: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold)),
                     ),
                     Text(
-                      "${(totalTimeInSeconds ~/ 60)} minute", // Display total time in minutes
+                      "${(totalTimeInSeconds ~/ 60)} minute",
                       style: GoogleFonts.getFont('Mulish',
                           textStyle:
                               TextStyle(fontSize: 14, color: Colors.black54)),
@@ -101,12 +101,12 @@ class _HabitTimerPageState extends State<HabitTimerPage> {
           CircularPercentIndicator(
             radius: 150.0,
             lineWidth: 15.0,
-            percent: progressValue, // Progress based on the remaining time
+            percent: progressValue,
             center: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  formatTime(remainingTimeInSeconds), // Dynamic remaining time
+                  formatTime(remainingTimeInSeconds),
                   style: GoogleFonts.getFont('Mulish',
                       textStyle:
                           TextStyle(fontSize: 36, fontWeight: FontWeight.bold)),
@@ -126,8 +126,6 @@ class _HabitTimerPageState extends State<HabitTimerPage> {
           ),
 
           SizedBox(height: 40),
-
-          // Control Buttons
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
